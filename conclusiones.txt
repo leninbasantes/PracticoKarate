@@ -1,0 +1,19 @@
+Hallazgos y Conclusiones del Ejercicio de Gestión de Mascotas
+
+Durante el desarrollo del ejercicio propuesto, se implementaron varias operaciones de API utilizando Karate DSL en el contexto de una tienda de mascotas. Las operaciones realizadas incluyeron la adición de una mascota, consulta por ID, actualización de la información de la mascota y consulta de mascotas por su estado.
+
+Hallazgos:
+
+1. Implementación de la API: La implementación de la API con Karate resultó ser directa y eficiente, permitiendo definir de manera clara las peticiones HTTP junto con las validaciones de las respuestas obtenidas.
+
+2. Uso de Variables Dinámicas: La asignación dinámica de valores como el id de la mascota y los nombres actualizados demuestra la flexibilidad de Karate para manejar datos dinámicos en las pruebas.
+
+3. Validaciones de Respuestas: Se realizaron validaciones de las respuestas de la API para asegurar que las operaciones se ejecutaran correctamente. Esto incluyó verificar el código de estado HTTP y el contenido de las respuestas.
+
+4. Actualización y Consulta de Estados: La actualización del estado de la mascota a "sold" y la posterior verificación de este cambio ilustran cómo se pueden gestionar y validar los estados de los recursos en la API.
+
+Conclusiones:
+
+1. Eficiencia de Karate para Pruebas de API: Karate demostró ser una herramienta poderosa y eficiente para la creación de pruebas de API, gracias a su sintaxis clara y su capacidad para manejar tanto las peticiones como las validaciones de manera integrada.
+
+2. Importancia de la Validación de Datos: La validación de los datos retornados por las API es crucial para asegurar el correcto funcionamiento de las operaciones. Las pruebas realizadas validaron desde los códigos de estado hasta el contenido específico de las respuestas, asegurando la integridad de la gestión de mascotas.

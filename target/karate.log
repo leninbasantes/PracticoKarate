@@ -1,0 +1,24 @@
+20:38:07.606 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:38:08.910 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:38:09.037 [main] ERROR com.intuit.karate - classpath:examples/users/users.feature:31
+And request user
+js failed:
+>>>>
+01: user
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "user" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:31
+20:43:24.172 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:43:25.196 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:43:25.285 [main] ERROR com.intuit.karate - classpath:examples/users/users.feature:31
+And request user
+js failed:
+>>>>
+01: user
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "user" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:31
