@@ -1,4 +1,4 @@
-package examples.pets;
+package pets;
 
 import com.intuit.karate.junit5.Karate;
 

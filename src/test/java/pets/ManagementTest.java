@@ -1,4 +1,4 @@
-package examples.pets;
+package pets;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
@@ -10,6 +10,7 @@ import java.util.List;
 import net.masterthought.cucumber.Configuration; // Importación corregida
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.commons.io.FileUtils;
+
 
 
 public class ManagementTest {
