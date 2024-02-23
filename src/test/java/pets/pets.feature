@@ -1,13 +1,12 @@
 Feature: Gestión de mascotas en la tienda de mascotas
 
-  Background:
-    * def urlBase = 'https://petstore.swagger.io'
-    * def petsPath = '/v2/pet'
+  Scenario Outline: Añadir y gestionar una mascota en la tienda con datos desde CSV
+    * def urlBase = '<urlBase>'
+    * def petsPath = '<petsPath>'
+    * def name = '<name>'
+    * def nameupdate = '<nameupdate>'
     * def petId = ''
-    * def name = 'nttdata'
-    * def nameupdate = 'nttdataUpdateEC'
 
-  Scenario: Añadir y gestionar una mascota en la tienda
     # Añadir una mascota
     * def pet =
       """
@@ -17,7 +16,7 @@ Feature: Gestión de mascotas en la tienda de mascotas
           "id": 0,
           "name": "categoryName"
         },
-        "name": #(name),
+        "name": "#(name)",
         "photoUrls": [
           "http://example.com/photo.png"
         ],
@@ -51,7 +50,7 @@ Feature: Gestión de mascotas en la tienda de mascotas
           "id": 0,
           "name": "categoryName"
         },
-        "name": #(nameupdate),
+        "name": "#(nameupdate)",
         "photoUrls": [
           "http://example.com/photo_updated.png"
         ],
@@ -69,16 +68,17 @@ Feature: Gestión de mascotas en la tienda de mascotas
     When method put
     Then status 200
 
-  # Consultar mascotas por estatus "sold"
+    # Consultar mascotas por estatus "sold"
     Given url urlBase + petsPath + '/findByStatus'
     And param status = 'sold'
     When method get
     Then status 200
     And def petsSold = response
 
- # Verificar si nuestro ID de mascota esta sold
+    # Verificar si nuestro ID de mascota esta en "sold"
     * def isPetFound = function(pets){ for (var i = 0; i < pets.length; i++) { if (pets[i].id == petId) return true; } return false; }
     * def petFound = isPetFound(petsSold)
     And assert petFound == true
 
-
+    Examples:
+      | read('data.csv') |

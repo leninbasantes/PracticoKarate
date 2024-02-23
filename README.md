@@ -43,9 +43,15 @@ mvn archetype:generate -DarchetypeGroupId=com.intuit.karate -DarchetypeArtifactI
 
   Para ejecutar las pruebas automatizadas, sigue estos pasos:
 
-  1. **Navegar al paquete de pruebas:** Dirígete al paquete `Pets` dentro de tu proyecto, donde encontrarás la clase `PetsRunner`.
+  1. **Datos importados desde un csv:** Se puede cambiar los datos: 
+      - urlBase: URL de la api.
+      - petsPath: Ruta de la api.
+      - name: Nombre al momento de crear.
+      - nameupdate: Nuevo nombre para actualizar.
 
-  2. **Ejecutar `PetsRunner`:** Haz clic derecho en la clase `PetsRunner` y selecciona `Run 'PetsRunner'`. Esto ejecutará las pruebas definidas en el archivo `pets.feature`.
+  2. **Navegar al paquete de pruebas:** Dirígete al paquete `Pets` dentro de tu proyecto, donde encontrarás la clase `PetsRunner`.
+
+  3. **Ejecutar `PetsRunner`:** Haz clic derecho en la clase `PetsRunner` y selecciona `Run 'PetsRunner'`. Esto ejecutará las pruebas definidas en el archivo `pets.feature`.
 
 - **Visualización de Reportes**
 
